@@ -10,15 +10,15 @@ function postprocess_vf {
 
 mkdir -p ../fonts ../fonts/TTF ../fonts/OTF ../fonts/VF ../fonts/WOFF2
 
-# echo "GENERATING VFs"
+echo "GENERATING VFs"
 
 VF_FILE=../fonts/VF/Cabin\[wdth,wght]\.ttf
 glyphs2ufo CabinRegular_v3001.glyphs --generate-GDEF
-fontmake -m CabinRegular.designspace -o variable --output-path $VF_FILE
+fontmake -m vf_cabin_roman.designspace -o variable --output-path $VF_FILE
 
 VF_FILEit=../fonts/VF/Cabin-Italic\[wdth,wght]\.ttf
 glyphs2ufo CabinItalic_v3001.glyphs --generate-GDEF
-fontmake -m CabinItalic.designspace -o variable --output-path $VF_FILEit
+fontmake -m vf_cabin_italic.designspace -o variable --output-path $VF_FILEit
 
 
 echo "POST PROCESSING VFs"
@@ -30,21 +30,9 @@ python3 Cabin_stat_table.py $VF_FILE
 
 
 echo "GENERATING TTFs"
-#Cabin Roman
-gftools rename-font $VF_FILE "Cabin Condensed"
-mv ../fonts/VF/CabinCondensed\[wdth,wght]\.ttf ../fonts/TTF/CabinCondensed\[wght]\.ttf
-fontTools varLib.instancer ../fonts/TTF/CabinCondensed\[wght]\.ttf wdth=75 -o ../fonts/TTF/CabinCondensed\[wght]\.ttf
-fontmake -m CabinRegular_statics.designspace -i -o ttf --output-dir ../fonts/TTF/ -a
+fontmake -m statics_cabin_roman.designspace -i -o ttf --output-dir ../fonts/TTF/ -a
+fontmake -m statics_cabin_italic.designspace -i -o ttf --output-dir ../fonts/TTF/ -a
 
-rm -rf ../fonts/TTF/CabinCondensed\[wght]\.ttf
-
-#Cabin Italics
-gftools rename-font $VF_FILEit "Cabin Condensed"
-mv ../fonts/VF/CabinCondensed-Italic\[wdth,wght]\.ttf ../fonts/TTF/CabinCondensed-Italic\[wght]\.ttf
-fontTools varLib.instancer ../fonts/TTF/CabinCondensed-Italic\[wght]\.ttf wdth=75 -o ../fonts/TTF/CabinCondensed-Italic\[wght]\.ttf
-fontmake -m CabinItalic_statics.designspace -i -o ttf --output-dir ../fonts/TTF/ -a
-
-rm -rf ../fonts/TTF/CabinCondensed-Italic\[wght]\.ttf
 
 echo "POST PROCESSING TTFs"
 ttfs=$(ls ../fonts/TTF/*.ttf)
@@ -58,8 +46,8 @@ done
 
 
 echo "GENERATING OTFs"
-fontmake -m CabinRegular_statics.designspace -i -o otf --output-dir ../fonts/OTF/ -a
-fontmake -m CabinItalic_statics.designspace -i -o otf --output-dir ../fonts/OTF/ -a
+fontmake -m statics_cabin_roman.designspace -i -o otf --output-dir ../fonts/OTF/ -a
+fontmake -m statics_cabin_italic.designspace -i -o otf --output-dir ../fonts/OTF/ -a
 
 echo "POST PROCESSING OTFs"
 otfs=$(ls ../fonts/OTF/*.otf)
@@ -70,5 +58,6 @@ done
 
 
 # cleanup
-rm -rf ../fonts/TTF/*gasp*.ttf ../fonts/VF/*gasp*.ttf instance_ufos *.ufo CabinRegular_v3001.designspace CabinItalic_v3001.designspace
+rm -rf ../fonts/TTF/*gasp*.ttf ../fonts/VF/*gasp*.ttf CabinRegular_v3001.designspace CabinItalic_v3001.designspace
+#instance_ufos *.ufo
 

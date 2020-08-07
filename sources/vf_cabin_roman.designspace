@@ -26,13 +26,13 @@
         <dimension name="Width" xvalue="100"/>
       </location>
     </source>
-    <source filename="Cabin-Condensed.ufo" name="Cabin Condensed" familyname="Cabin" stylename="Condensed">
+    <source filename="Cabin-Condensed.ufo" name="Cabin Condensed" familyname="Cabin Condensed" stylename="Regular">
       <location>
         <dimension name="Weight" xvalue="95"/>
         <dimension name="Width" xvalue="75"/>
       </location>
     </source>
-    <source filename="Cabin-CondensedBold.ufo" name="Cabin Condensed Bold" familyname="Cabin" stylename="Condensed Bold">
+    <source filename="Cabin-CondensedBold.ufo" name="Cabin Condensed Bold" familyname="Cabin Condensed" stylename="Bold">
       <location>
         <dimension name="Weight" xvalue="128"/>
         <dimension name="Width" xvalue="75"/>
@@ -40,7 +40,7 @@
     </source>
   </sources>
   <instances>
-    <instance name="Cabin Regular" familyname="Cabin" stylename="Regular" filename="instance_ufos/Cabin-Regular.ufo">
+    <instance name="Cabin Regular" familyname="Cabin" stylename="Regular" filename="instance_ufos/Cabin-Regular.ufo" stylemapfamilyname="Cabin" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="95"/>
         <dimension name="Width" xvalue="100"/>
@@ -48,7 +48,7 @@
       <kerning/>
       <info/>
     </instance>
-    <instance name="Cabin Medium" familyname="Cabin" stylename="Medium" filename="instance_ufos/Cabin-Medium.ufo">
+    <instance name="Cabin Medium" familyname="Cabin" stylename="Medium" filename="instance_ufos/Cabin-Medium.ufo" stylemapfamilyname="Cabin Medium" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="109"/>
         <dimension name="Width" xvalue="100"/>
@@ -56,7 +56,7 @@
       <kerning/>
       <info/>
     </instance>
-    <instance name="Cabin SemiBold" familyname="Cabin" stylename="SemiBold" filename="instance_ufos/Cabin-SemiBold.ufo">
+    <instance name="Cabin SemiBold" familyname="Cabin" stylename="SemiBold" filename="instance_ufos/Cabin-SemiBold.ufo" stylemapfamilyname="Cabin SemiBold" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="116"/>
         <dimension name="Width" xvalue="100"/>
@@ -64,10 +64,42 @@
       <kerning/>
       <info/>
     </instance>
-    <instance name="Cabin Bold" familyname="Cabin" stylename="Bold" filename="instance_ufos/Cabin-Bold.ufo">
+    <instance name="Cabin Bold" familyname="Cabin" stylename="Bold" filename="instance_ufos/Cabin-Bold.ufo" stylemapfamilyname="Cabin" stylemapstylename="bold">
       <location>
         <dimension name="Weight" xvalue="128"/>
         <dimension name="Width" xvalue="100"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Cabin Condensed Regular" familyname="Cabin Condensed" stylename="Regular" filename="instance_ufos/CabinCondensed-Regular.ufo" stylemapfamilyname="Cabin Condensed" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="95"/>
+        <dimension name="Width" xvalue="75"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Cabin Condensed Medium" familyname="Cabin Condensed" stylename="Medium" filename="instance_ufos/CabinCondensed-Medium.ufo" stylemapfamilyname="Cabin Condensed Medium" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="109"/>
+        <dimension name="Width" xvalue="75"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Cabin Condensed SemiBold" familyname="Cabin Condensed" stylename="SemiBold" filename="instance_ufos/CabinCondensed-SemiBold.ufo" stylemapfamilyname="Cabin Condensed SemiBold" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="116"/>
+        <dimension name="Width" xvalue="75"/>
+      </location>
+      <kerning/>
+      <info/>
+    </instance>
+    <instance name="Cabin Condensed Bold" familyname="Cabin Condensed" stylename="Bold" filename="instance_ufos/CabinCondensed-Bold.ufo" stylemapfamilyname="Cabin Condensed" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="128"/>
+        <dimension name="Width" xvalue="75"/>
       </location>
       <kerning/>
       <info/>
