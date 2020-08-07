@@ -26,13 +26,13 @@
         <dimension name="Width" xvalue="100"/>
       </location>
     </source>
-    <source filename="Cabin-Condensed.ufo" name="Cabin Condensed" familyname="Cabin Condensed" stylename="Regular">
+    <source filename="Cabin-Regular#1.ufo" name="Cabin Regular" familyname="Cabin" stylename="Regular">
       <location>
         <dimension name="Weight" xvalue="95"/>
         <dimension name="Width" xvalue="75"/>
       </location>
     </source>
-    <source filename="Cabin-CondensedBold.ufo" name="Cabin Condensed Bold" familyname="Cabin Condensed" stylename="Bold">
+    <source filename="Cabin-Bold#1.ufo" name="Cabin Bold" familyname="Cabin" stylename="Bold">
       <location>
         <dimension name="Weight" xvalue="128"/>
         <dimension name="Width" xvalue="75"/>

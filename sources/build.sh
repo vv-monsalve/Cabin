@@ -59,5 +59,5 @@ done
 
 # cleanup
 rm -rf ../fonts/TTF/*gasp*.ttf ../fonts/VF/*gasp*.ttf CabinRegular_v3001.designspace CabinItalic_v3001.designspace
-#instance_ufos *.ufo
+instance_ufos *.ufo
 
